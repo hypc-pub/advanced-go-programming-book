@@ -1,20 +1,23 @@
 {
-	"gitbook": "3.x",
-	"title": "Go语言高级编程",
-	"description": "Go语言高级编程",
-	"language": "zh-hans",
+    "gitbook": "3.x",
+    "title": "Go语言高级编程",
+    "description": "Go语言高级编程",
+    "language": "zh-hans",
 
-	"structure": {
-		"readme": "preface.md"
-	},
+    "structure": {
+        "readme": "preface.md"
+    },
 
-	"pluginsConfig": {
-		"theme-default": {
-			"showLevel": false
-		}
-	},
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": false
+        }
+    },
 
-	"plugins": [
-		"-search"
-	]
+    "plugins": [
+        "theme-opendocs", "bg-nest",
+        "-lunr", "-search", "search-pro",
+        "-sharing",
+        "-fontsettings"
+    ]
 }
