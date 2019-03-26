@@ -1,0 +1,515 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.10 补充说明 · Go语言高级编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="../ch6-cloud/readme.html" />
+    
+    
+    <link rel="prev" href="ch5-09-gated-launch.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Go语言高级编程</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                
+                <a href="../ch6-cloud/readme.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="ch5-09-gated-launch.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Introduction
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../ch1-basic/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            第1章 语言基础
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../ch2-cgo/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            第2章 CGO编程
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../ch3-asm/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            第3章 汇编语言
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../ch4-rpc/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            第4章 RPC和Protobuf
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            第5章 Go和Web
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="ch5-01-introduction.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.1 Web开发简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-02-router.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.2 请求路由
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-03-middleware.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.3 中间件
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-04-validator.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.4 请求校验
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-05-database.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.5 和数据库打交道
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-06-ratelimit.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.6 服务流量限制
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-07-layout-of-web-project.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.7 大型Web项目分层
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-08-interface-and-web.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.8 接口和表驱动开发
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-09-gated-launch.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.9 灰度发布和A/B测试
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="ch5-10-ext.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            5.10 补充说明
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../ch6-cloud/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            第6章 分布式系统
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../appendix/readme.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            附录
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="510-&#x8865;&#x5145;&#x8BF4;&#x660E;">5.10 &#x8865;&#x5145;&#x8BF4;&#x660E;</h1>
+<p>&#x73B0;&#x4EE3;&#x7684;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x662F;&#x79BB;&#x4E0D;&#x5F00;Web&#x7684;&#xFF0C;&#x5E7F;&#x4E49;&#x5730;&#x6765;&#x8BB2;&#xFF0C;Web&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x975E;&#x5F97;&#x57FA;&#x4E8E;http&#x534F;&#x8BAE;&#x3002;&#x53EA;&#x8981;&#x662F;CS&#x6216;&#x8005;BS&#x67B6;&#x6784;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;Web&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x5373;&#x4F7F;&#x662F;&#x5728;&#x770B;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x5C01;&#x95ED;&#x7684;&#x6E38;&#x620F;&#x7CFB;&#x7EDF;&#x91CC;&#xFF0C;&#x56E0;&#x4E3A;&#x73A9;&#x5BB6;&#x4EEC;&#x4E0E;&#x65E5;&#x4FF1;&#x589E;&#x7684;&#x8054;&#x673A;&#x9700;&#x6C42;&#xFF0C;&#x4E5F;&#x540C;&#x6837;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x8FDC;&#x7A0B;&#x901A;&#x4FE1;&#xFF0C;&#x8FD9;&#x91CC;&#x9762;&#x4E5F;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x5F88;&#x591A;Web&#x65B9;&#x9762;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x4EE3;&#xFF0C;Web&#x7F16;&#x7A0B;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;&#x6240;&#x5FC5;&#x987B;&#x63A5;&#x89E6;&#x7684;&#x77E5;&#x8BC6;&#x9886;&#x57DF;&#x3002;&#x65E0;&#x8BBA;&#x4F60;&#x7684;&#x76EE;&#x6807;&#x662F;&#x6210;&#x4E3A;&#x67B6;&#x6784;&#x5E08;&#xFF0C;&#x662F;&#x53BB;&#x521B;&#x4E1A;&#xFF0C;&#x6216;&#x662F;&#x53BB;&#x5F53;&#x6280;&#x672F;&#x987E;&#x95EE;&#x3002;Web&#x65B9;&#x9762;&#x7684;&#x77E5;&#x8BC6;&#x90FD;&#x4F1A;&#x6210;&#x4E3A;&#x4F60;&#x7684;&#x786C;&#x901A;&#x8D27;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/bg-nest.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/init.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"5.10 补充说明","level":"1.6.10","depth":2,"next":{"title":"第6章 分布式系统","level":"1.7","depth":1,"path":"ch6-cloud/readme.md","ref":"ch6-cloud/readme.md","articles":[{"title":"6.1 分布式 id 生成器","level":"1.7.1","depth":2,"path":"ch6-cloud/ch6-01-dist-id.md","ref":"ch6-cloud/ch6-01-dist-id.md","articles":[]},{"title":"6.2 分布式锁","level":"1.7.2","depth":2,"path":"ch6-cloud/ch6-02-lock.md","ref":"ch6-cloud/ch6-02-lock.md","articles":[]},{"title":"6.3 延时任务系统","level":"1.7.3","depth":2,"path":"ch6-cloud/ch6-03-delay-job.md","ref":"ch6-cloud/ch6-03-delay-job.md","articles":[]},{"title":"6.4 分布式搜索引擎","level":"1.7.4","depth":2,"path":"ch6-cloud/ch6-04-search-engine.md","ref":"ch6-cloud/ch6-04-search-engine.md","articles":[]},{"title":"6.5 负载均衡","level":"1.7.5","depth":2,"path":"ch6-cloud/ch6-05-load-balance.md","ref":"ch6-cloud/ch6-05-load-balance.md","articles":[]},{"title":"6.6 分布式配置管理","level":"1.7.6","depth":2,"path":"ch6-cloud/ch6-06-config.md","ref":"ch6-cloud/ch6-06-config.md","articles":[]},{"title":"6.7 分布式爬虫","level":"1.7.7","depth":2,"path":"ch6-cloud/ch6-07-crawler.md","ref":"ch6-cloud/ch6-07-crawler.md","articles":[]},{"title":"6.8 补充说明","level":"1.7.8","depth":2,"path":"ch6-cloud/ch6-08-ext.md","ref":"ch6-cloud/ch6-08-ext.md","articles":[]}]},"previous":{"title":"5.9 灰度发布和A/B测试","level":"1.6.9","depth":2,"path":"ch5-web/ch5-09-gated-launch.md","ref":"ch5-web/ch5-09-gated-launch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","bg-nest","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"bg-nest":{},"search-pro":{},"highlight":{},"theme-opendocs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"preface.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言高级编程","language":"zh-hans","gitbook":"3.x","description":"Go语言高级编程"},"file":{"path":"ch5-web/ch5-10-ext.md","mtime":"2019-03-26T06:39:21.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-26T06:40:10.668Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
