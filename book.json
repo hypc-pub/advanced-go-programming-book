@@ -11,6 +11,9 @@
     "pluginsConfig": {
         "theme-default": {
             "showLevel": false
+        },
+		"ga": {
+            "token": "UA-131598830-2"
         }
     },
 
@@ -18,6 +21,7 @@
         "theme-opendocs", "bg-nest",
         "-lunr", "-search", "search-pro",
         "-sharing",
-        "-fontsettings"
+        "-fontsettings",
+		"ga"
     ]
 }
